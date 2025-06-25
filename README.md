@@ -3,10 +3,10 @@ This is the repository for ChemNER, a named entity recognition model for chemica
 
 ## Quick Start
 Run the following command to install the package and its dependencies:
-```
+```bash
 git clone git@github.com:Ozymandias314/ChemIENER.git
 cd chemiener
-python setup.py install
+pip install .
 ```
 
 Download the checkpoint and use ChemNER to extract chemical entities from chemical descriptions:
@@ -33,15 +33,18 @@ The predictions are given in character-level spans, and have the following forma
 ]
 ```
 
+## Requirements
+- Python >=3.8
+- PyTorch >=2.0.0
+- Transformers >=4.30.0
+- Other dependencies are listed in `pyproject.toml`
+
 ## Data
 We train our model on the [`CHEMDNER`](https://jcheminf.biomedcentral.com/articles/10.1186/1758-2946-7-S1-S2) corpus of annotated titles and abstracts from chemical literature. The processed
 data can be found at [`data/`](data).
 
 ## Train and Evaluate ChemNER
-Run this script to train and evaluate ChemNER.
+Run this script to train and evaluate ChemNER:
 ```bash
 bash scripts/train_ner.sh
 ```
-
-
-
