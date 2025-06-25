@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ChemIENER"
+version = "0.1.0"
+authors = [
+    { name = "Vincent Fan", email = "vincentf@mit.edu" },
+]
+description = "Chemical Information Extraction and Named Entity Recognition"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
+    "opencv-python>=4.8.0",
+    "Pillow>=10.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Ozymandias314/ChemIENER"
+"Bug Tracker" = "https://github.com/Ozymandias314/ChemIENER/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["chemiener"] 
